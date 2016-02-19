@@ -1,3 +1,12 @@
+<script>
+    var angle = 0;
+function Oogklik(){
+    document.getElementById("oog").style.backgroundColor = "green";
+    angle += 90;
+    $("#oogplaatje").rotate(angle);
+}
+
+</script>
 <html>
 <link rel="import" href="header.html">
 
@@ -6,6 +15,6 @@
 <p>Dikke fissa is je hissa</p>
 </div>
     
-    <div id="oog"> <img src="images/eye.png"></div>
+    <div id="oog" onclick="Oogklik()"> <img id ="oogplaatje" src="images/eye.png" height="400px" width="400px"></div>
 </body>
 </html>

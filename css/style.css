@@ -6,6 +6,9 @@ body{
     background-color: blue;
 }
 #oog{
-    align-self: center;
-    margin-top: 200px;
+    
+    height: 400px;
+    width: 400px;
+    margin-top: 10%;
+    margin-left: 30%;
 }
