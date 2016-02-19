@@ -1,3 +1,16 @@
+<script>
+    
+function Oogklik(){
+ //document.getElementById("oog").style.backgroundColor = "green";
+  // document.getElementById("oog").style.height = "100px";
+    setInterval(move(),3);
+}
+    function move(){
+        
+        document.getElementById("oog").style.height = document.getElementById("oog").style.height - "10px";
+    }
+
+</script>
 <html>
 <link rel="import" href="header.html">
 
@@ -5,7 +18,6 @@
 <div class="content">
 <p>Dikke fissa is je hissa</p>
 </div>
-    
-    <div id="oog"> <img src="images/eye.png"></div>
+    <div id="oog" onclick="Oogklik()"> <img id="oogplaatje" src="images/eye.png" height="100%" width="100%"></div>
 </body>
 </html>
