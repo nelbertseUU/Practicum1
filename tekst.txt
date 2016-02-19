@@ -1,0 +1,15 @@
+Webvisualisatie
+
+We moeten op de een of asndere maniet het web visualiseren.
+Dit gaat dus uiteidelijk een weergave zijn van nodes, verbonden met connecties.
+
+VRAGEN
+Welke data wordt er hier gebruikt?
+Hoe verkrijgt men die?
+Hoe visualiseer je deze zaken? 
+Welke verschillende soorten manieren zijn er om het te visualiseren en wat kan je hier mee visualiseren?
+
+ONDERZOEKSVRAAG
+Hoe is het internet te visualiseren?
+
+Inleiding

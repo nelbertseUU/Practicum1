@@ -8,5 +8,7 @@ Te doen:
   - Grafiek mbv Flot
   - Navigatiestructuur site
   - Inhoudsopgave (boomstructuur overzicht van site die je kunt in- en uitklappen)
-  
+  - Plaatje the Box (internet - it-crowd)	  
+
+
 Af:
