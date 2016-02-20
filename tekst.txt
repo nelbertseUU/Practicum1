@@ -1,6 +1,6 @@
 Webvisualisatie
 
-We moeten op de een of asndere maniet het web visualiseren.
+We moeten op de een of andere manier het web visualiseren.
 Dit gaat dus uiteidelijk een weergave zijn van nodes, verbonden met connecties.
 
 VRAGEN
@@ -10,7 +10,7 @@ Hoe visualiseer je deze zaken?
 Welke verschillende soorten manieren zijn er om het te visualiseren en wat kan je hier mee visualiseren?
 
 ONDERZOEKSVRAAG
-Hoe is het internet te visualiseren?
+Op welke manieren is het internet te visualiseren?
   - Infographics
   - Real time visualisations
 
@@ -18,5 +18,8 @@ Hoe is het internet te visualiseren?
 Inleiding
 
 Het internet, we kennen en gebruiken het allemaal. 
-Youtube filmpjes, facebook statussen en reddit posts zijn geïntegreerd in ons dagelijks leven.
-Het internet is met de tijd zo vanzelfsprekend geworden, dat men er niet meer bij stilstaat hoe immens het eigenlijks is.
+Youtube filmpjes, tweets en facebook statussen zijn geïntegreerd in ons dagelijks leven.
+In een relatief korte tijd van ongeveer twintig á dertig jaar heeft het internet ons leven veranderd.
+Het internet is met de tijd zo vanzelfsprekend geworden, dat men er niet meer bij stilstaat hoe verbazingwekkend het internet eigenlijks is.
+Door het web te visualiseren, is het mogelijk om een beeld te krijgen van de invloed van het internet op ons leven.
+Onze onderzoeksvraag luidt daarom: Op welke manieren is het internet te visualiseren?
