@@ -2,21 +2,64 @@
 
 /* ---------- Belangrijke tags ---------- */
 
+html{
+    min-height: 100%;
+    overflow: -moz-scrollbars-vertical; 
+	overflow-y: scroll;
+}
+
 body{
-    background-color: blue;
+    font-family: verdana;
+    margin: 0px;
+    background-color: #369AFF;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.content{
+    margin: 38px 10px 0px 10px;
 }
 
 #oog{
     
     height: 400px;
     width: 400px;
-    margin-top: 10%;
-    margin-left: 30%;
+}
+
+/* ---------- Tekst ---------- */
+
+.hoofdtitel{
+    display: flex;
+    justify-content: center;
 }
 
 /* ---------- Menubalk ---------- */
 
 .menubalk{
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    width: 100%;
+}
+
+.menublokken{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    background-color: aliceblue;
+}
+
+.menulinks{
+    color: cadetblue;
     text-decoration: none;
-    
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+.menulinks:hover{
+    color:black;
 }
