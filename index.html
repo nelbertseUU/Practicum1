@@ -1,13 +1,16 @@
+<script src="js/randomColor.js"></script>
 <script>  
 function Oogklik(){
  //document.getElementById("oog").style.backgroundColor = "green";
   // document.getElementById("oog").style.height = "100px";
-    setInterval(move(),3);
+   setInterval(move, 1000);
+   
 }
-function move(){
-
-    document.getElementById("oog").style.height = document.getElementById("oog").style.height - "10px";
-}
+ function move(){
+   
+   document.getElementById("oog").style.backgroundColor = randomColor();
+    document.getElementById("demo").innerHTML = randomColor();   
+ }
 </script>
 
 <link rel="import" href="header.html">
@@ -25,6 +28,10 @@ function move(){
 <h1 class="hoofdtitel">Webvisualisatie</h1>
 
     <div id="oog" onclick="Oogklik()"><img id="oogplaatje" src="images/eye.png" height="100%" width="100%"></div>
+    
+    
+    <p id="demo">hhhhhhhhhhhhhhhhhhhhh</p>
+    
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a dui et dui consectetur congue at eget est. Pellentesque at imperdiet lacus. Praesent at arcu nec lorem malesuada laoreet quis a dolor. Proin at ante mi. Proin aliquam lorem consequat justo dapibus finibus. Curabitur consequat est a neque ornare vestibulum. Donec porttitor sem et augue pharetra, in euismod leo molestie. Curabitur ut ex et dui maximus convallis quis at nisl. Aenean finibus fringilla mauris, nec gravida augue bibendum vitae. Morbi ipsum dolor, varius quis molestie eget, gravida at tellus. Sed porta ligula a enim lacinia ornare. Sed eget malesuada libero. Proin pharetra tellus vitae magna elementum placerat.
 
 Phasellus porta posuere elit, id pellentesque libero facilisis non. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas venenatis pretium ante, eu porta quam. Cras scelerisque tincidunt augue, non accumsan nunc sagittis nec. Donec metus elit, vulputate in urna eget, elementum maximus sapien. Curabitur vehicula tincidunt maximus. Praesent tincidunt ex eu velit posuere pulvinar. Donec eu dapibus leo, id rutrum ante. Praesent ultrices, urna sit amet eleifend tempus, ipsum erat finibus turpis, sit amet tristique quam nulla a metus. Nullam auctor magna tellus, eget posuere urna condimentum eget. Quisque sodales vehicula massa, in laoreet lacus.
