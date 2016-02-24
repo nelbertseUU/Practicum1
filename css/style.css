@@ -52,6 +52,10 @@ body{
     background-color: aliceblue;
 }
 
+.dropdown_blok{
+    flex-direction: column;
+}
+
 .menulinks{
     color: cadetblue;
     text-decoration: none;
@@ -61,4 +65,14 @@ body{
 
 .menulinks:hover{
     color:black;
+}
+
+.dropdown_menublokken{
+    display: none;
+    margin-top: 38px;
+    width: 20%;
+}
+
+ul li:hover{
+	display:block;
 }
