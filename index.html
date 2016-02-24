@@ -4,13 +4,51 @@ function Oogklik(){
  //document.getElementById("oog").style.backgroundColor = "green";
   // document.getElementById("oog").style.height = "100px";
    setInterval(move, 1000);
+    rotateAnimation("oogplaatje",30);
+    rotateAnimationAndersom("oog",30);
    
 }
  function move(){
    
    document.getElementById("oog").style.backgroundColor = randomColor();
-    document.getElementById("demo").innerHTML = randomColor();   
+    document.getElementById("demo").innerHTML = randomColor(); 
+     
  }
+</script> 
+<script src="js/ping.js"></script>
+    <script>//script om een site of ip te pingen
+    var do_ping = function() {
+        ping(document.getElementById('pingurl').value).then(function(delta) {
+            document.getElementById("pingtime").innerHTML = "Pingtijd is: " + delta + " miliseconde";   
+        }).catch(function(error) {
+            alert(String(error));
+        });
+    };
+    </script>
+<script> //script voor het draaien van t plaatje
+var looper;
+var degrees = 0;
+function rotateAnimation(el,speed){
+	var elem = document.getElementById(el);
+	if(navigator.userAgent.match("Chrome")){
+		elem.style.WebkitTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("Firefox")){
+		elem.style.MozTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("MSIE")){
+		elem.style.msTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("Opera")){
+		elem.style.OTransform = "rotate("+degrees+"deg)";
+	} else {
+		elem.style.transform = "rotate("+degrees+"deg)";
+	}
+	looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')',speed);
+	degrees++;
+	if(degrees > 359){
+		degrees = 1;
+	}
+	document.getElementById("statusOfRotation").innerHTML = "rotate("+degrees+"deg)";
+}
+    
 </script>
 
 <link rel="import" href="header.html">
@@ -36,7 +74,14 @@ function Oogklik(){
     <div id="oog" onclick="Oogklik()"><img id="oogplaatje" src="images/eye.png" height="400px" width="400px"/></div>
     
     
-    <p id="demo">hhhhhhhhhhhhhhhhhhhhh</p>
+   
+    <div id="ipIn">
+     <input id='pingurl' type='text' value='http://google.com'></input>
+    <button onclick='do_ping()'>Ping</button>
+    <p id="statusOfRotation"></p>
+    <p id="demo"></p>
+    <p id="pingtime"></p>
+    </div>
     
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a dui et dui consectetur congue at eget est. Pellentesque at imperdiet lacus. Praesent at arcu nec lorem malesuada laoreet quis a dolor. Proin at ante mi. Proin aliquam lorem consequat justo dapibus finibus. Curabitur consequat est a neque ornare vestibulum. Donec porttitor sem et augue pharetra, in euismod leo molestie. Curabitur ut ex et dui maximus convallis quis at nisl. Aenean finibus fringilla mauris, nec gravida augue bibendum vitae. Morbi ipsum dolor, varius quis molestie eget, gravida at tellus. Sed porta ligula a enim lacinia ornare. Sed eget malesuada libero. Proin pharetra tellus vitae magna elementum placerat.
 
