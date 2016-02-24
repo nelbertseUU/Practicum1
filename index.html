@@ -50,17 +50,29 @@ function rotateAnimation(el,speed){
 }
     
 </script>
-
+<script>
+	//Doet precies wat de naam suggereert, zorgt ervoor dat het dropdown menu wordt gedisplayed als je bent ingelogd en je hovert over uitloggen.
+	//De tweede functie doet precies het omgekeerde.
+	function displayDropdown(){
+ var a = document.querySelector('.dropdown_menu');
+ a.style.display = "block";
+}
+function hideDropdown(){
+    var a = document.querySelector('.dropdown_menu');
+    a.style.display = "none";
+}
+	
+</script>
 <link rel="import" href="header.html">
 <body>
     <div class="menu">
         <ul class="menubalk">
             <li class="menublokken" ><a class="menulinks" href="index.html">Home</a></li>
-            <li class="menublokken" id="dropdown_blok"><a class="menulinks" href="index.html">Paper</a>
-            <ul>
-                <li class="dropdown_menublokken"><a class="menulinks">placeholder</a></li>
-                <li class="dropdown_menublokken"><a class="menulinks">placeholder</a></li>
-                <li class="dropdown_menublokken"><a class="menulinks">placeholder</a></li>
+            <li class="menublokken" id="dropdown_blok"><a class="menulinks" onmouseover="displayDropdown()" onmouseleave='hideDropdown()' href="index.html">Paper</a>
+            <ul class="dropdown_menu" onmouseover="displayDropdown()" onmouseleave='hideDropdown()'>
+                <li class="menublokken"><a class="menulinks" href="index.html">placeholder</a></li>
+                <li class="menublokken"><a class="menulinks" href="index.html">placeholder</a></li>
+                <li class="menublokken"><a class="menulinks" href="index.html">placeholder</a></li>
             </ul>
             </li>
             <li class="menublokken"><a class="menulinks" href="index.html">Fotobrowser</a></li>
