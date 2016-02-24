@@ -51,9 +51,9 @@ body{
     width: 20%;
     background-color: aliceblue;
 }
-
 .dropdown_blok{
-    flex-direction: column;
+    display: flex;
+    flex-direction: column;   
 }
 
 .menulinks{
@@ -67,12 +67,10 @@ body{
     color:black;
 }
 
-.dropdown_menublokken{
+.dropdown_menu{
     display: none;
+    position: absolute;
     margin-top: 38px;
-    width: 20%;
-}
-
-ul li:hover{
-	display:block;
+    margin-left: -15%;
+    width: 100%;
 }
