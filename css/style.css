@@ -1,5 +1,17 @@
 /* ---------- Stijl van de pagina ---------- */
 
+/* ---------- Font ---------- */
+
+@font-face {
+	font-family: 'Geo Sans Light';
+	src: url('font/GeosansLight.ttf');
+}
+
+@font-face {
+	font-family: 'Geo Sans Light Oblique';
+	src: url('font/GeosansLight-Oblique.ttf');
+}
+
 /* ---------- Belangrijke tags ---------- */
 
 html{
@@ -9,7 +21,8 @@ html{
 }
 
 body{
-    font-family: verdana;
+    text-align: justify;
+    font-family: Geo Sans Light, sans-serif;
     margin: 0px;
     background-color: #369AFF;
     display: flex;
@@ -19,7 +32,24 @@ body{
 }
 
 .content{
-    margin: 38px 10px 0px 10px;
+    width: 80%;
+    margin: 50px 10px 10px 10px;
+    padding: 20px;
+    background-color: #e6ffff;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.parent_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.centreer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #oog{
@@ -34,29 +64,60 @@ body{
     justify-content: center;
 }
 
+.kopje{
+    display: flex;
+    justify-content: center;
+}
+
+.tussenkopje{
+    display: flex;
+    justify-content: center;
+}
+
+.omschrijving{
+    font-family: Geo Sans Light Oblique;
+    width: 640px;
+    font-size: 15px;
+}
+
+/* ---------- Video ---------- */
+
+.youtube{
+    border: 0px;
+}
+
 /* ---------- Menubalk ---------- */
 
 .menubalk{
+    z-index: 200;
     position: fixed;
     margin: 0px;
     padding: 0px;
     list-style: none;
     display: flex;
     width: 100%;
+    box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
 .menublokken{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 20%;
     background-color: aliceblue;
 }
-.dropdown_blok{
+
+.menublokken_dropdown{
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: aliceblue;
 }
 
 .menulinks{
+    display: flex;
+    justify-content: center;
     color: cadetblue;
     text-decoration: none;
     text-transform: uppercase;
@@ -67,10 +128,45 @@ body{
     color:black;
 }
 
-.dropdown_menu{
+.dropdown{
+    display: flex;
+    
+}
+
+.dropdown_menu_paper{
+    background-color: aliceblue;
     display: none;
     position: absolute;
-    margin-top: 38px;
-    margin-left: -15%;
+    padding: 0px;
+    width: 20%;
+}
+
+.dropdown_menu_acces_logs{
+    background-color: aliceblue;
+    display: none;
+    position: absolute;
+    padding: 0px;
+    width: 20%;
+}
+
+/* ---------- Footer ---------- */
+
+#footer{
+    height: 100px;
     width: 100%;
+    margin-bottom: 0px;
+    background-color: darkgray;
+    color: aliceblue;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+/* ---------- Acces Logs ---------- */
+
+.voorbeeld_acces_logs{
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.afstand_menu{
+    height: 38px;
 }

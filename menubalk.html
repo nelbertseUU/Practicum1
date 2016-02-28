@@ -1,0 +1,44 @@
+<script>
+//Doet precies wat de naam suggereert.
+//De tweede functie doet exact het omgekeerde.
+function displayDropdownPaper(){
+    var a = document.querySelector('.dropdown_menu_paper');
+    a.style.display = "block";
+}
+function hideDropdownPaper(){
+    var a = document.querySelector('.dropdown_menu_paper');
+    a.style.display = "none";
+}
+function displayDropdownAccesLog(){
+    var a = document.querySelector('.dropdown_menu_acces_logs');
+    a.style.display = "block";
+}
+function hideDropdownAccesLog(){
+    var a = document.querySelector('.dropdown_menu_acces_logs');
+    a.style.display = "none";
+}
+</script>
+<div class="menu">
+        <ul class="menubalk">
+            <li class="menublokken" ><a class="menulinks" href="index.html">Home</a></li>
+            <li class="menublokken"><a class="menulinks" onmouseover="displayDropdownPaper()" onmouseleave="hideDropdownPaper()" href="index.html">Paper</a>
+            <div class="dropdown">
+            <ul class="dropdown_menu_paper" onmouseover="displayDropdownPaper()" onmouseleave="hideDropdownPaper()">
+                <li class="menublokken_dropdown"><a class="menulinks" id="margin_dropdown" href="index.html">placeholder</a></li>
+                <li class="menublokken_dropdown"><a class="menulinks" id="margin_dropdown" href="index.html">placeholder</a></li>
+                <li class="menublokken_dropdown"><a class="menulinks" id="margin_dropdown" href="index.html">placeholder</a></li>
+            </ul>
+            </div>
+            </li>
+            <li class="menublokken"><a class="menulinks" onmouseover="displayDropdownAccesLog()" onmouseleave="hideDropdownAccesLog()" href="acces_logs.html">Acces Logs</a>
+            <ul class="dropdown_menu_acces_logs" onmouseover="displayDropdownAccesLog()" onmouseleave="hideDropdownAccesLog()">
+                <li class="menublokken_dropdown"><a class="menulinks" href="acces_logs.html#Logstalgia">Logstalgia</a></li>
+                <li class="menublokken_dropdown"><a class="menulinks" href="acces_logs.html#glTail">glTail</a></li>
+                <li class="menublokken_dropdown"><a class="menulinks" href="acces_logs.html#Gource">Gource</a></li>
+                <li class="menublokken_dropdown"><a class="menulinks" href="acces_logs.html#glTrail">glTrail</a></li>
+            </ul>
+            </li>
+            <li class="menublokken"><a class="menulinks" href="index.html">Fotobrowser</a></li>
+            <li class="menublokken"><a class="menulinks" href="index.html">Over</a></li>
+        </ul>
+    </div>
