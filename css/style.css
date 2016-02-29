@@ -34,7 +34,7 @@ body{
 .content{
     width: 80%;
     margin: 50px 10px 10px 10px;
-    padding: 20px;
+    padding: 20px 40px;
     background-color: #e6ffff;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
@@ -133,20 +133,13 @@ body{
     
 }
 
-.dropdown_menu_paper{
+.dropdown_menu{
     background-color: aliceblue;
     display: none;
     position: absolute;
     padding: 0px;
     width: 20%;
-}
-
-.dropdown_menu_acces_logs{
-    background-color: aliceblue;
-    display: none;
-    position: absolute;
-    padding: 0px;
-    width: 20%;
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
 }
 
 /* ---------- Footer ---------- */
@@ -169,4 +162,37 @@ body{
 
 .afstand_menu{
     height: 38px;
+}
+
+/* ---------- Traceroute ---------- */
+
+.kleuren_lijst{
+    list-style: none;
+    width: 200px;
+    padding: 0px;
+}
+
+.blauw{
+    background-color: #1056CA;
+    padding: 10px;
+}
+
+.groen{
+    background-color: #88F509;
+    padding: 10px;
+}
+
+.paars{
+    background-color: #A50FEB;
+    padding: 10px;
+}
+
+.rood{
+    background-color: #A91034;
+    padding: 10px;
+}
+
+.oranje{
+    background-color: #E99330;
+    padding: 10px;
 }
