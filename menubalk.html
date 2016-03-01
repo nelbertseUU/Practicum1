@@ -17,6 +17,14 @@ function hideDropdownAccesLog(){
     var a = document.getElementById('acces_logs');
     a.style.display = "none";
 }
+function displayDropdownOverig(){
+    var a = document.getElementById('overig');
+    a.style.display = "block";
+}
+function hideDropdownOverig(){
+    var a = document.getElementById('overig');
+    a.style.display = "none";
+}
 </script>
 <div class="menu">
         <ul class="menubalk">
@@ -38,7 +46,11 @@ function hideDropdownAccesLog(){
                 <li class="menublokken_dropdown"><a class="menulinks" href="acces_logs.html#glTrail">glTrail</a></li>
             </ul>
             </li>
-            <li class="menublokken"><a class="menulinks" href="overige_visualisaties.html">Overige visualisaties</a></li>
+            <li class="menublokken"><a class="menulinks" onmouseover="displayDropdownOverig()" onmouseleave="hideDropdownOverig()" href="overige_visualisaties.html">Overige visualisaties</a>
+            <ul class="dropdown_menu" id="overig" onmouseover="displayDropdownOverig()" onmouseleave="hideDropdownOverig()">
+                <li class="menublokken_dropdown"><a class="menulinks" href="overige_visualisaties.html#infographics">Infographics</a></li>
+            </ul>
+            </li>
             <li class="menublokken"><a class="menulinks" href="index.html">Fotobrowser</a></li>
         </ul>
     </div>

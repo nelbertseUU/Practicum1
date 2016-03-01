@@ -1,4 +1,8 @@
+<!DOCTYPE html>
+<head>
 <link rel="import" href="header.html">
+<title>Webvisualisatie</title>
+</head>
 <body>
 <div id="menubalk"></div>
 <div class="parent_content">
@@ -27,7 +31,9 @@ De laatste vijf getallen van de acces log bevatten de tijd die een aantal proces
 <li>>Pagina: wiki/Database_Backup_Terugzetten_Geavanceerd</li>
 <li>Useragent: Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) - Zoals u kunt zien was de bezoeker in dit geval een bot, en de gebruikte browser Mozzila.</li>
 <li>Status: 200 - Dit geeft aan dat het verzoek goed is afgehandeld.</li>
+</ul>
 <p>Laatse 5 getallen:</p>
+<ul>
 <li>Tijd dat het geduurt heeft het hele verzoek af te handelen: 572269</li> 
 <li>User-time: 4000</li>
 <li>System-time: 8001</li>
@@ -42,40 +48,41 @@ De laatste vijf getallen van de acces log bevatten de tijd die een aantal proces
 <p>Logstalgia is een programma dat focust op het verkeer van een website. Hierbij gebruikt het programma de zojuist beschreven acces logs om een visualisatie te geven. Logstalgia geeft een visualisatie die lijkt op een soort retro pong spel, waarbij de server balletjes tegen moet houden die de verzoeken voorstellen.
 <br/>
 Aan de linkerkant van het scherm worden alle IP-adressen of hostnamen getoond op basis van moment van opvragen. Vervolgens zijn de verzoeken te zien die in de vorm van een gekleurd balletje over het scherm bewegen en worden verzonden vanuit een of meerdere IP-adressen. Dit verzoek komt uiteindelijk aan bij het opgevraagde bestand aan de rechterkant, tevens de serverkant, en wordt in het geval dat het verzoek succesvol is teruggekaatst naar het desbetreffende IP-adres. Als het verzoek onsuccesvol is, wordt het balletje doorgelaten. De rechterkant is voor het gemak ook gesorteerd op categorie van bestand (CSS, Script, etc.). Hieronder een filmpje waarop het programma getoond wordt.</p>
+</a>
 <div class="centreer">
 <p>Filmpje van visualisatie:</p>
 <iframe class="youtube" width="640" height="360" src="http://www.youtube.com/embed/HeWfkPeDQbY">
 </iframe>
 </div>
-</a>
 <a name="glTail">
 <div class="afstand_menu"></div>
 <h3 class="tussenkopje">glTail</h3>
 <p>glTail is een programma waarmee in real time logbestanden gevisualiseerd kunnen worden. Dit bevat dus de acces logs, maar kan in principe elk soort logbestand zijn die op een server staat die SSH (SSH of Secure Shell is een protocol op de applicatielaag dat zorgt voor een veilige manier van inloggen en andere veilige netwerk services over een onveilig netwerk) gebruikt. Het programma is geschreven in Ruby en maakt gebruik van net-ssh (een implementatie van het SSH protocol geschreven in Ruby), de Chipmunk library (Chipmunk library zorgt voor tweedimensionale, snelle en simpele rigid body physics en is geschreven in C) en ruby-opengl (een OpenGL wrapper voor Ruby).</p>
 <p>Dit programma heeft een aantal handige eigenschappen, bijvoorbeeld het feit dat het programma meerdere logbestanden op verschillende servers kan laten zien en dat de gebruiker zijn eigen layout kan instellen. Ook zijn er meerdere logbestand parsers geïmplementeerd, waardoor de gebruiker een breed scala aan logbestanden kan visualiseren. Tenslotte kan de native app gedownload worden op iOS.</p>
+</a>
 <div class="centreer">
 <p>Filmpje van visualisatie:</p>
 <iframe class="youtube" width="640" height="360" src="http://www.youtube.com/embed/RCa2sjyrUdQ">
 </iframe>
 <p class="omschrijving">Bovenstaand filmpje geeft een voorbeeld van HTTP verkeer op een aantal persoonlijke websites. Aan de linkerkant staat elke cirkel voor een hit op een website (opgehaald uit acces logs van Apache). Een klein verzoek is weergegeven door een kleine cirkel, een groot verzoek door een grote cirkel. De kleur geeft aan van welke site het verzoek kwam. Aan de rechterkant wordt elke cirkel weergegeven door een opgevraagde URL of een hit via een doorverwezen link. Tenslotte staan de getallen voor het aantal verzoeken per minuut.</p>
 </div>
-</a>
 <a name="Gource">
 <div class="afstand_menu"></div>
 <h3 class="tussenkopje">Gource</h3>
 <p>Een andere manier van data visualiseren is het programma Gource. Dit is een programma waarmee veranderingen in een project worden afgebeeld door middel van een soort geanimeerd boomdiagram. Hierbij is de root van een map het begin van het boomdiagram en telkens als er een nieuw bestand toe wordt gevoegd komt er een nieuw balletje om de map heen. Als er een nieuwe map toegevoegd wordt, wordt er een link gelegd naar de root en nieuwe bestanden in die map worden op dezelfde manier om de map heen getoond. Dit programma is origineel bedoeld voor het visualiseren van versie controle, maar het is ook mogelijk om andere data (bijvoorbeeld acces logs) mee te geven.</p>
+</a>
 <div class="centreer">
 <p>Filmpje van het inladen van acces logs in Gource:</p>
 <iframe class="youtube" width="640" height="360" src="http://www.youtube.com/embed/iuFfchhse8M">
 </iframe>
-</div>
-</a>   
+</div>  
 <a name="glTrail">
 <div class="afstand_menu"></div>
 <h3 class="tussenkopje">glTrail</h3>
 <p>Dit programma is van dezelfde maker als het hiervoor genoemde programma. In dit geval geeft het programma een visualisatie van het gebruik van een website. Het programma glTail kan in principe hetzelfde en meer visualiseren vergeleken met dit programma, maar dit programma geeft een andere visualisatie.</p>
 <p>glTrail is geschreven in C++ en maakt gebruik van het SSH protocol, de Qt-toolkit (graphische toolkit voor C++) en OpenGL (Open Graphics Library is een library die ervoor zorgt dat in plaats van losse pixels door de CPU uit te laten rekenen, er complete objecten, lichtinstellingen en camerapositite naar de GPU worden gestuurd zodat de CPU minder hoeft uit te rekenen). Hoewel dit programma al redelijk verouderd is, geeft het nog steeds een interessant beeld van websites.</p> 
 <p>Het programma laat webpagina’s zien en hoe verschillende pagina’s in relatie met elkaar staan. Een webpagina wordt weergegeven als een cirkel, en relaties zijn lijnen tussen die cirkels. De lijnen worden dikker naar mate de relatie populairder wordt en de grootte van de cirkels is gebaseerd op de hoeveelheid inhoud van de pagina. Tenslotte zijn de vliegende puntjes de individuele momenten dat een pagina bekeken wordt.</p>
+</a>
 <div class="centreer">
 <p>Filmpje website verkeer visualisatie:</p>
 <iframe class="youtube" width="640" height="360" src="http://www.youtube.com/embed/28wDdu17ZTk">
@@ -89,7 +96,6 @@ Aan de linkerkant van het scherm worden alle IP-adressen of hostnamen getoond op
 <p class="omschrijving">
 In het bovenstaande filmpje wordt het programma uitgevoerd bij de site digg.com (een site die verhalen toont die actueel zijn en vervolgens door mensen ‘gediggt’ (vergelijkbaar met likes of upvotes) kunnen worden). In de visualisatie zijn de blauwe cirkels verhalen en de kleine groene cirkels gebruikers.</p>
 </div>
-</a>
 </div>
 </div>
 <div id="footer"></div>
