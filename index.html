@@ -1,9 +1,19 @@
 <!DOCTYPE html>
-<link rel="import" href="header.html">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Webvisualisatie</title>
 <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<meta http-equiv="description" content="page description" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/style.css">
 <script src="js/randomColor.js"></script>
+<script src="js/jquery-2.2.0.js"></script> 
+<script> 
+$(function(){
+  $("#menubalk").load("menubalk.html"); 
+  $("#footer").load("footer.html"); 
+});
+</script> 
 <script>  
 function Oogklik(){
  //document.getElementById("oog").style.backgroundColor = "green";
@@ -60,12 +70,12 @@ function rotateAnimation(el,speed){
 <div class="content">
 <h1 class="hoofdtitel">Webvisualisatie</h1>
 
-    <div id="oog" onclick="Oogklik()"><img id="oogplaatje" src="images/eye.png" height="400" width="400"/></div>
+    <div id="oog" onclick="Oogklik()"><img id="oogplaatje" src="images/eye.png" height="400" width="400" alt="oogbal"/></div>
     
     
    
     <div id="ipIn">
-     <input id='pingurl' type='text' value='http://google.com'></input>
+     <input id='pingurl' type='text' value='http://google.com'/>
     <button onclick='do_ping()'>Ping</button>
     <p id="statusOfRotation"></p>
     <p id="demo"></p>
