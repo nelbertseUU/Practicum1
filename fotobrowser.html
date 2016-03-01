@@ -1,0 +1,54 @@
+<link rel="import" href="header.html">
+<script src="js/jquery-ui.js"> </script>
+<script>
+    $(document).ready(function () {
+    $("#button").click(function (event) {
+        var searchTerm = $("#searchbox").val();
+        var Flickurl = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=42204b69cbc9116fd03600ee3041e1f3&";
+        var tags = "&tags=" + searchTerm;
+        var tagmode = "&tagmode=any";
+        var jsonFormat = "&format=json&nojsoncallback=1";
+        var FinalURL = Flickurl + tags + tagmode + jsonFormat;
+
+         $.getJSON(FinalURL, function(photos) {
+             var photo = photos.photos.photo[0];
+             console.log(photo);
+             
+    $("#tester").append(FinalURL);
+    
+             
+             var photoUrl = "https://farm" + photo.farm + ".staticflickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + ".jpg";
+             
+             $('#results').append('<img src="' + photoUrl + '"/>');
+          });
+    
+    });
+});
+             
+</script>  
+  
+
+<body>
+<div id="menubalk"></div>
+<div class="parent_content">
+<div class="content">
+<h1 class="hoofdtitel">Webvisualisatie</h1>
+    
+<div id="input"> 
+    <input type="text" id="searchbox" value = "webtech">
+<h2>Vul een zoekterm in, druk dan op de knop</h2>  
+<button type="button" class="btn btn-success" id="button">Get em Photos</button>  
+    
+<hr>  
+</div>  
+ <p id="tester"></p>
+    <hr>
+
+<div id="results">
+    </div>
+    
+    </div>
+</div>  
+    <div id="footer"></div>
+</body>  
+</html>  
