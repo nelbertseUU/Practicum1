@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Webvisualisatie</title>
- 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="css/style.css">
 <script src="js/jquery-2.2.0.js"></script> 
@@ -17,11 +16,13 @@
 <div id="menubalk"></div>
 <div class="parent_content">
 <div class="content">
+<a name="bron1">
 <h1 class="hoofdtitel">Webvisualisatie</h1>
-<h2 class="kopje">Acces Logs</h2>  
+<h2 class="kopje">Acces Logs</h2>
 <p>Een van de vormen van webdata zijn acces logs. Acces logs bestaan uit één regel en bevatten een aantal handige gegevens. De data bestaat uit een IP-adres van een client die data opvraagt van de server, alsmede de desbetreffende data. Ook bevat een acces log wat voor type verzoek het is (GET, SET), welke pagina uit de server bezocht is, Het moment van het verzoek, useragent (de gebruikte browser) en de status die de bezoeker terugkrijgt.
 <br/>
 De laatste vijf getallen van de acces log bevatten de tijd die een aantal processen van een verzoek gekost hebben in microseconden.</p>
+</a>
 <ul>
 <li>Het eerste getal is de tijd die het heeft geduurd om het verzoek af te handelen (tijd start vanaf binnenkomst verzoek).</li>
 <li>Het tweede getal is de user-time; de CPU-tijd die het verzoek gekost heeft om berekeningen te doen.</li>
@@ -29,7 +30,7 @@ De laatste vijf getallen van de acces log bevatten de tijd die een aantal proces
 <li>Het vierde getal is de children user-time; in het geval dat er meerdere processen of threads nodig waren voor het verzoek, geeft dit getal de CPU-tijd aan van de berekeningen van al deze processen samen.</li>
 <li>Het vijfde getal is de children system-time; in het geval dat er meerdere processen of threads nodig waren voor het verzoek geeft dit getal de CPU-tijd van alle system calls van alle subprocessen.</li>
 </ul>
-<p>Hieronder staat een voorbeeld van een acces log:</p>
+<p>Hieronder staat een voorbeeld van een acces log <a id="bron1" href="https://www.byte.nl/kennisbank/item/access_logs_-_waar_ze_staan_en_hoe_je_ze_gebruikt">[1]</a>:</p>
 <div class="voorbeeld_acces_logs">
 157.55.39.63 – – [21/Sep/2014:00:40:23 +0200] “GET wiki/Database_Backup_Terugzetten_Geavanceerd HTTP/1.1” 200 66675 “-” “Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)” “-” “-” 157.55.39.63 byte.nl pid:12320 572269 4000 8001 248016 80005
 </div>
@@ -57,7 +58,7 @@ De laatste vijf getallen van de acces log bevatten de tijd die een aantal proces
 <h3 class="tussenkopje">Logstalgia</h3>
 <p>Logstalgia is een programma dat focust op het verkeer van een website. Hierbij gebruikt het programma de zojuist beschreven acces logs om een visualisatie te geven. Logstalgia geeft een visualisatie die lijkt op een soort retro pong spel, waarbij de server balletjes tegen moet houden die de verzoeken voorstellen.
 <br/>
-Aan de linkerkant van het scherm worden alle IP-adressen of hostnamen getoond op basis van moment van opvragen. Vervolgens zijn de verzoeken te zien die in de vorm van een gekleurd balletje over het scherm bewegen en worden verzonden vanuit een of meerdere IP-adressen. Dit verzoek komt uiteindelijk aan bij het opgevraagde bestand aan de rechterkant, tevens de serverkant, en wordt in het geval dat het verzoek succesvol is teruggekaatst naar het desbetreffende IP-adres. Als het verzoek onsuccesvol is, wordt het balletje doorgelaten. De rechterkant is voor het gemak ook gesorteerd op categorie van bestand (CSS, Script, etc.). Hieronder een filmpje waarop het programma getoond wordt.</p>
+Aan de linkerkant van het scherm worden alle IP-adressen of hostnamen getoond op basis van moment van opvragen. Vervolgens zijn de verzoeken te zien die in de vorm van een gekleurd balletje over het scherm bewegen en worden verzonden vanuit een of meerdere IP-adressen. Dit verzoek komt uiteindelijk aan bij het opgevraagde bestand aan de rechterkant, tevens de serverkant, en wordt in het geval dat het verzoek succesvol is teruggekaatst naar het desbetreffende IP-adres. Als het verzoek onsuccesvol is, wordt het balletje doorgelaten. De rechterkant is voor het gemak ook gesorteerd op categorie van bestand (CSS, Script, etc.). Hieronder een filmpje waarop het programma getoond wordt. <a href="http://logstalgia.io/">[2]</a></p>
 </a>
 <div class="centreer">
 <p>Filmpje van visualisatie:</p>
@@ -68,7 +69,7 @@ Aan de linkerkant van het scherm worden alle IP-adressen of hostnamen getoond op
 <div class="afstand_anchor"></div>
 <h3 class="tussenkopje">glTail</h3>
 <p>glTail is een programma waarmee in real time logbestanden gevisualiseerd kunnen worden. Dit bevat dus de acces logs, maar kan in principe elk soort logbestand zijn die op een server staat die SSH (SSH of Secure Shell is een protocol op de applicatielaag dat zorgt voor een veilige manier van inloggen en andere veilige netwerk services over een onveilig netwerk) gebruikt. Het programma is geschreven in Ruby en maakt gebruik van net-ssh (een implementatie van het SSH protocol geschreven in Ruby), de Chipmunk library (Chipmunk library zorgt voor tweedimensionale, snelle en simpele rigid body physics en is geschreven in C) en ruby-opengl (een OpenGL wrapper voor Ruby).</p>
-<p>Dit programma heeft een aantal handige eigenschappen, bijvoorbeeld het feit dat het programma meerdere logbestanden op verschillende servers kan laten zien en dat de gebruiker zijn eigen layout kan instellen. Ook zijn er meerdere logbestand parsers geïmplementeerd, waardoor de gebruiker een breed scala aan logbestanden kan visualiseren. Tenslotte kan de native app gedownload worden op iOS.</p>
+<p>Dit programma heeft een aantal handige eigenschappen, bijvoorbeeld het feit dat het programma meerdere logbestanden op verschillende servers kan laten zien en dat de gebruiker zijn eigen layout kan instellen. Ook zijn er meerdere logbestand parsers geïmplementeerd, waardoor de gebruiker een breed scala aan logbestanden kan visualiseren. Tenslotte kan de native app gedownload worden op iOS. <a href="http://www.fudgie.org/">[3]</a> <a href="https://tools.ietf.org/html/rfc4251">[4]</a> <a href="https://chipmunk-physics.net/">[5]</a> <a href="https://rubygems.org/gems/net-ssh/versions/3.0.2">[6]</a> <a href="https://rubygems.org/gems/opengl/versions/0.9.2">[7]</a></p>
 </a>
 <div class="centreer">
 <p>Filmpje van visualisatie:</p>
@@ -79,7 +80,7 @@ Aan de linkerkant van het scherm worden alle IP-adressen of hostnamen getoond op
 <a name="Gource">
 <div class="afstand_anchor"></div>
 <h3 class="tussenkopje">Gource</h3>
-<p>Een andere manier van data visualiseren is het programma Gource. Dit is een programma waarmee veranderingen in een project worden afgebeeld door middel van een soort geanimeerd boomdiagram. Hierbij is de root van een map het begin van het boomdiagram en telkens als er een nieuw bestand toe wordt gevoegd komt er een nieuw balletje om de map heen. Als er een nieuwe map toegevoegd wordt, wordt er een link gelegd naar de root en nieuwe bestanden in die map worden op dezelfde manier om de map heen getoond. Dit programma is origineel bedoeld voor het visualiseren van versie controle, maar het is ook mogelijk om andere data (bijvoorbeeld acces logs) mee te geven.</p>
+<p>Een andere manier van data visualiseren is het programma Gource. Dit is een programma waarmee veranderingen in een project worden afgebeeld door middel van een soort geanimeerd boomdiagram. Hierbij is de root van een map het begin van het boomdiagram en telkens als er een nieuw bestand toe wordt gevoegd komt er een nieuw balletje om de map heen. Als er een nieuwe map toegevoegd wordt, wordt er een link gelegd naar de root en nieuwe bestanden in die map worden op dezelfde manier om de map heen getoond. Dit programma is origineel bedoeld voor het visualiseren van versie controle, maar het is ook mogelijk om andere data (bijvoorbeeld acces logs) mee te geven. <a href="http://gource.io/">[8]</a></p>
 </a>
 <div class="centreer">
 <p>Filmpje van het inladen van acces logs in Gource:</p>
@@ -91,7 +92,7 @@ Aan de linkerkant van het scherm worden alle IP-adressen of hostnamen getoond op
 <h3 class="tussenkopje">glTrail</h3>
 <p>Dit programma is van dezelfde maker als het hiervoor genoemde programma. In dit geval geeft het programma een visualisatie van het gebruik van een website. Het programma glTail kan in principe hetzelfde en meer visualiseren vergeleken met dit programma, maar dit programma geeft een andere visualisatie.</p>
 <p>glTrail is geschreven in C++ en maakt gebruik van het SSH protocol, de Qt-toolkit (graphische toolkit voor C++) en OpenGL (Open Graphics Library is een library die ervoor zorgt dat in plaats van losse pixels door de CPU uit te laten rekenen, er complete objecten, lichtinstellingen en camerapositite naar de GPU worden gestuurd zodat de CPU minder hoeft uit te rekenen). Hoewel dit programma al redelijk verouderd is, geeft het nog steeds een interessant beeld van websites.</p> 
-<p>Het programma laat webpagina’s zien en hoe verschillende pagina’s in relatie met elkaar staan. Een webpagina wordt weergegeven als een cirkel, en relaties zijn lijnen tussen die cirkels. De lijnen worden dikker naar mate de relatie populairder wordt en de grootte van de cirkels is gebaseerd op de hoeveelheid inhoud van de pagina. Tenslotte zijn de vliegende puntjes de individuele momenten dat een pagina bekeken wordt.</p>
+<p>Het programma laat webpagina’s zien en hoe verschillende pagina’s in relatie met elkaar staan. Een webpagina wordt weergegeven als een cirkel, en relaties zijn lijnen tussen die cirkels. De lijnen worden dikker naar mate de relatie populairder wordt en de grootte van de cirkels is gebaseerd op de hoeveelheid inhoud van de pagina. Tenslotte zijn de vliegende puntjes de individuele momenten dat een pagina bekeken wordt. <a href="http://www.fudgie.org/gltrail.html">[9]</a> <a href="https://www.opengl.org/wiki/Main_Page">[10]</a></p>
 </a>
 <div class="centreer">
 <p>Filmpje website verkeer visualisatie:</p>
@@ -106,6 +107,35 @@ Aan de linkerkant van het scherm worden alle IP-adressen of hostnamen getoond op
 <p class="omschrijving">
 In het bovenstaande filmpje wordt het programma uitgevoerd bij de site digg.com (een site die verhalen toont die actueel zijn en vervolgens door mensen ‘gediggt’ (vergelijkbaar met likes of upvotes) kunnen worden). In de visualisatie zijn de blauwe cirkels verhalen en de kleine groene cirkels gebruikers.</p>
 </div>
+</div>
+<div class="bronnen">
+    <h2 class="kopje">Bronnen van deze pagina</h2>
+    <div class="bronnen_lijsten">
+    <ul class="bronnen_lijst">
+        <li><a href="https://www.byte.nl/kennisbank/item/access_logs_-_waar_ze_staan_en_hoe_je_ze_gebruikt">https://www.byte.nl/kennisbank/item/access_logs_-_waar_ze_staan_en_hoe_je_ze_gebruikt</a></li>
+        <li><a href="http://logstalgia.io/">http://logstalgia.io/</a></li>
+        <li><a href="http://www.fudgie.org/">http://www.fudgie.org/</a></li>
+        <li><a href="https://tools.ietf.org/html/rfc4251">https://tools.ietf.org/html/rfc4251</a></li>
+        <li><a href="https://chipmunk-physics.net/">https://chipmunk-physics.net/</a></li>
+        <li><a href="https://rubygems.org/gems/net-ssh/versions/3.0.2">https://rubygems.org/gems/net-ssh/versions/3.0.2</a></li>
+        <li><a href="https://rubygems.org/gems/opengl/versions/0.9.2">https://rubygems.org/gems/opengl/versions/0.9.2</a></li>
+        <li><a href="http://gource.io/">http://gource.io/</a></li>
+        <li><a href="http://www.fudgie.org/gltrail.html">http://www.fudgie.org/gltrail.html</a></li>
+        <li><a href="https://www.opengl.org/wiki/Main_Page">https://www.opengl.org/wiki/Main_Page</a></li>
+    </ul>
+    <ul class="locatie_tekst">
+        <li><a href="#bron1">locatie in tekst</a></li>
+        <li><a href="#Logstalgia">locatie in tekst</a></li>
+        <li><a href="#glTail">locatie in tekst</a></li>
+        <li><a href="#glTail">locatie in tekst</a></li>
+        <li><a href="#glTail">locatie in tekst</a></li>
+        <li><a href="#glTail">locatie in tekst</a></li>
+        <li><a href="#glTail">locatie in tekst</a></li>
+        <li><a href="#Gource">locatie in tekst</a></li>
+        <li><a href="#glTrail">locatie in tekst</a></li>
+        <li><a href="#glTrail">locatie in tekst</a></li>
+    </ul>
+    </div>
 </div>
 </div>
 <div id="footer"></div>

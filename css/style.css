@@ -21,7 +21,6 @@ html{
 }
 
 body{
-    text-align: justify;
     font-family: Geo Sans Light, sans-serif;
     margin: 0px;
     background-color: #369AFF;
@@ -31,7 +30,14 @@ body{
     flex-direction: column;
 }
 
+.parent_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .content{
+    text-align: justify;
     width: 80%;
     min-height: 86%;
     margin: 50px 0px 10px 0px;
@@ -40,10 +46,15 @@ body{
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
-.parent_content{
+.bronnen{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+    width: 80%;
+    background-color: #e6ffff;
+    padding: 20px 40px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    margin-bottom: 10px;
 }
 
 .centreer{
@@ -146,6 +157,10 @@ body{
     box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
 }
 
+.afstand_anchor{
+    height: 38px;
+}
+
 /* ---------- Footer ---------- */
 
 #footer{
@@ -158,15 +173,15 @@ body{
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
+.bronnen_link{
+    color:aliceblue;
+}
+
 /* ---------- Acces Logs ---------- */
 
 .voorbeeld_acces_logs{
     padding: 10px;
     border: 1px solid black;
-}
-
-.afstand_anchor{
-    height: 38px;
 }
 
 /* ---------- Traceroute ---------- */
@@ -202,3 +217,29 @@ body{
     background-color: #E99330;
     padding: 10px;
 }
+
+/* ---------- Bronnen ---------- */
+
+.bronnen_lijsten{
+    display: flex;
+    width: 80%;
+}
+
+.bronnen_lijst{
+    list-style: decimal;
+    min-width: 76%;
+}
+
+.locatie_tekst{
+    list-style: none;
+    padding: 0px;
+}
+
+.locatie_tekst li:nth-child(even){
+    background-color: #d9d9d9;
+}
+
+.bronnen_lijst li:nth-child(even){
+    background-color: #d9d9d9;
+}
+
