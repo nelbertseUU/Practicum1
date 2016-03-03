@@ -40,25 +40,30 @@ $(function(){
 <a name="infographics">
 <div class="afstand_anchor"></div>
 <h3 class="tussenkopje">Infographics</h3>
-<p>Een mooie manier om begrip te krijgen van het web is door middel van infographics. Een infographic geeft informatie door tekst met beeld te combineren. Veel voorkomende vormen van infographics zijn kaarten, grafieken, borden, tekeningen of interactieve applicaties. Het primaire doel van een infographic is het overdragen van informatie en kennis. Infographics worden al een lange tijd gebruikt om op een overzichtelijke manier kennis over te brengen. In het hedendaagse leven kom je infographics overal tegen, van de kaart in de bushalte, tot het verboden-te-eten bordje in de collegezaal.</p> 
+<p>Je hebt vast ooit gehoord van de term “Een foto zegt meer dan 100 woorden.”
+Een infographic borduurt hierop voort,  door veel informatie weer te geven doormiddel van afbeeldingen. Infographic is gedefinieerd als een visualisatie van data if ideeen die probeert complexe informatie over te brengen naar een publiek, en makkelijk gelezen en begrepen kan worden. 
+In het hedendaagse leven kom je infographics overal tegen, van de kaart in de bushalte, tot het verboden-te-eten bordje in de collegezaal.</p> 
 </a>
 <div class="centreer">
 <p>Een voorbeeld van een klassieke infographic zie je hier <a href="http://www.websitemagazine.com/images/blog/adayoftheinternet_info.png">[4]</a>:</p>
 <img src="images/adayoftheinternet_info.png" width="840" height="3700" alt="infographic"/>
+    <p>
+    De reden dat infographics zo populair zijn, ligt iets dieper in het menselijk brein. Aangezien 50% van het brein toegewijd is aan “zicht”, is het logisch dat we zo veel op ons zicht vertrouwen. Verder verwerkt je brein tekst anders dan een afbeelding. als je een tekst leest, dan moet je brein voor elke letter apart herkennen welke letter bij die vorm hoort, door ze te vergelijken met vormen uit je geheugen. Daarna moeten al die lettertjes nog worden samengevoegd tot woorden, daarna tot zinnen, en zo verder. dit gebeurt natuurlijk heel erg snel, maar als je kijkt naar de manier waarop je brein plaatjes verwerkt, kost het alsnog relatief veel moeite. Het brein verwart de data uit een afbeelding in een keer, het hele plaatje tegelijk. Tekst moet dus letter voor letter verwerkt worden. Mede hierdoor zijn infographics zo succesvol in het overbrengen van data. 
+
+    
+    
+    </p>
 <p>Een ander voorbeeld van een infographic is een grafiek, want een grafiek laat ook door middel van een afbeelding, onoverzichtelijke data zien.</p>
-[INSERT FLOT GRAFIEK HIER]
+
     
     
     <div id="grafiek1"></div>
     
     
     
-    
-    
-    
-    
-    
 </div>
+    <!--De data gebruikt in de grafiek : http://www.itu.int/ITU-D/ict/statistics/ict/ , en http://www.itu.int/en/ITU-D/Statistics/Documents/statistics/2014/ITU_Key_2005-2014_ICT_data.xls 
+-->
 </div>
 <div class="bronnen">
     <h2 class="kopje">Bronnen van deze pagina</h2>
@@ -67,12 +72,15 @@ $(function(){
          <li><a href="http://tweetping.net/">http://tweetping.net/</a></li>
         <li><a href="http://onesecond.designly.com/">http://onesecond.designly.com/</a></li>
         <li><a href="http://www.emojitracker.com/">http://www.emojitracker.com/</a></li>
+        <li><a href="http://ptgmedia.pearsoncmg.com/images/9780789749499/samplepages/0789749491.pdf">The Power of Infographics: Using Pictures to Communicate and Connect With Your Audiences, Mark Smiciklas - 18 jun. 2012</a>
+</li>
         <li><a href="http://www.websitemagazine.com/images/blog/adayoftheinternet_info.png">http://www.websitemagazine.com/images/blog/adayoftheinternet_info.png</a></li>
     </ul>
     <ul class="locatie_tekst">
         <li><a href="#tweetping">locatie in tekst</a></li>
         <li><a href="#one_second">locatie in tekst</a></li>
         <li><a href="#emoji_tracker">locatie in tekst</a></li>
+        <li><a href="#infographic">locatie in tekst</a></li>
         <li><a href="#infographic">locatie in tekst</a></li>
     </ul>
     </div>
@@ -81,7 +89,7 @@ $(function(){
 <div id="footer"></div>
 </body>
 </html>
-<script>
+<script>//hier voer je arrays van data in
     var data = [ { label: "Percentage internetgebruikers in America", data: [								
 [2005,35.9],
 [2006,38.8],
@@ -108,10 +116,10 @@ $(function(){
 ] }
 ];
     var options = {
-    series: {
+    series: {//en hier opties, er zijn een heleboel mogelijkheden
         lines: { show: true },
         points: { show: true }
     }
 };
-    $.plot($("#grafiek1"), data, options);
+    $.plot($("#grafiek1"), data, options);//uiteindelijk laat je hem ip deze manier zien.
     </script>
