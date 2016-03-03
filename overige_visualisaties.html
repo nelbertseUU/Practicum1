@@ -4,12 +4,15 @@
 <title>Webvisualisatie</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="css/style.css">
-<script src="js/jquery-2.2.0.js"></script> 
+    <script src="js/jquery-2.2.0.js"></script>
+<script src="js/flot/jquery.flot.js"></script>
 <script> 
 $(function(){
   $("#menubalk").load("menubalk.html"); 
   $("#footer").load("footer.html"); 
 });
+    
+   
 </script> 
 </head>
 <body>
@@ -44,6 +47,17 @@ $(function(){
 <img src="images/adayoftheinternet_info.png" width="840" height="3700" alt="infographic"/>
 <p>Een ander voorbeeld van een infographic is een grafiek, want een grafiek laat ook door middel van een afbeelding, onoverzichtelijke data zien.</p>
 [INSERT FLOT GRAFIEK HIER]
+    
+    
+    <div id="grafiek1"></div>
+    
+    
+    
+    
+    
+    
+    
+    
 </div>
 </div>
 <div class="bronnen">
@@ -67,3 +81,14 @@ $(function(){
 <div id="footer"></div>
 </body>
 </html>
+<script> var data = [ { label: "Foo", data: [ [10, 1], [17, -14], [30, 5] ] },
+  { label: "Bar", data: [ [11, 13], [19, 11], [30, -7] ] }
+];
+    var options = {
+    series: {
+        lines: { show: true },
+        points: { show: true }
+    }
+};
+    $.plot($("#grafiek1"), data, options);
+    </script>

@@ -29,7 +29,12 @@ body{
     align-content: center;
     flex-direction: column;
 }
-
+#grafiek1{
+    height: 400px;
+    width: 600px;
+    border: solid;
+    border-color: black;
+}
 .parent_content{
     display: flex;
     flex-direction: column;
