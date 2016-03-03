@@ -13,12 +13,13 @@
         
  
          $.getJSON(FinalURL, function(photos) {
+             
              for(i=0; i<aantalFotos; i++){
              var photo = photos.photos.photo[i];
              console.log(photo);
              var photoUrl = "https://farm" + photo.farm + ".staticflickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + ".jpg";
-             $("#tester").append(FinalURL);
-             $('#results').append('<img src="' + photoUrl + '"/>');
+             
+             $('#results').append('<img id="flickresultaat" src="' + photoUrl + '"/>');
             
           };
 });
@@ -40,15 +41,20 @@
     <input type="number" id="aantalBox" value="10">
 <h2>Vul een zoekterm in, druk dan op de knop</h2>  
 <button type="button" class="btn btn-success" id="button">Get em Photos</button>  
-    
-<hr>  
+     
 </div>  
- <p id="tester"></p>
-    <hr>
 
+    <hr>
+<div id="fotogallerij">
+    <div id="fotolinks"> Vorige </div>
+    
 <div id="results">
+    
     </div>
     
+    <div id="fotorechts"> Volgende</div>
+    
+    </div>
     </div>
 </div>  
     <div id="footer"></div>
