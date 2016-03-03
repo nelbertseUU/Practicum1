@@ -40,19 +40,19 @@
              console.log(photo);
              var photoUrl = "https://farm" + photo.farm + ".staticflickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + ".jpg";
              
-             $('#results').append('<img id="flickresultaat" src="' + photoUrl + '"/>');
+             $('#results').append('<a href="' + photoUrl + '" target="_blank"><img id="flickresultaat" src="' + photoUrl + '"/></a>');
              
              var photo = photos.photos.photo[fotoNummer - 1];
              console.log(photo);
              var photoUrl = "https://farm" + photo.farm + ".staticflickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + ".jpg";
              
-             $('#prlinks').append('<img id="flickresultaat" src="' + photoUrl + '"/>');
+             $('#prlinks').append('<a href="' + photoUrl + '" target="_blank"><img id="flickresultaat" src="' + photoUrl + '"/></a>');
              
              var photo = photos.photos.photo[fotoNummer + 1];
              console.log(photo);
              var photoUrl = "https://farm" + photo.farm + ".staticflickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + ".jpg";
              
-             $('#prrechts').append('<img id="flickresultaat" src="' + photoUrl + '"/>');
+             $('#prrechts').append('<a href="' + photoUrl + '" target="_blank"><img id="flickresultaat" src="' + photoUrl + '"/></a>');
          });
     }
     
