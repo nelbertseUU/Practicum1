@@ -1,5 +1,13 @@
-<link rel="import" href="header.html">
-<script src="js/jquery-ui.js"> </script>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Webvisualisatie</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/style.css">
+<head>
+<script src="js/jquery-2.2.0.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/include.js"></script>
 <script>
     var fotoNummer = 50;
     var FinalURL ="https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=42204b69cbc9116fd03600ee3041e1f3&tags=web&format=json&nojsoncallback=1";
@@ -9,11 +17,7 @@
         }
         else{
              fotoNummer = fotoNummer + 1;
-        }
-       
-       
-       
-        
+        }  
         Pakfoto(FinalURL, fotoNummer);
     }
     function naarL(){
@@ -22,16 +26,10 @@
         }
         else{
              fotoNummer = fotoNummer - 1;
-        }
-        
-        
-       
-        
+        } 
         Pakfoto(FinalURL, fotoNummer);
     }
     function Pakfoto(FinalURL, fotoNummer){
-        
-        
          $.getJSON(FinalURL, function(photos) {
               $('#results').empty();
         $('#prrechts').empty();
@@ -69,12 +67,9 @@
  
         Pakfoto(FinalURL, fotoNummer);
        });
-});
-   
-             
-</script>  
-  
-
+});           
+</script>
+</head>
 <body>
 <div id="menubalk"></div>
 <div class="parent_content">
@@ -84,14 +79,14 @@
 <div id="input"> 
     <input type="text" id="searchbox" value = "webtech">
 <h2>Vul een zoekterm in, druk dan op de knop</h2>  
-<button type="button" class="btn btn-success" id="button">Get em Photos</button>  
+<button type="button" class="btn btn-success" id="button">Haal foto's op</button>  
      
 </div>  
 
     <hr>
 <div id="fotogallerij">
-<div id="fotolinks" onclick="naarL()"> Vorige </div>
-    <div id="fotorechts" onclick="naarR()"> Volgende</div>
+<div class="vorige_volgende" id="vorige" onclick="naarL()">Vorige</div>
+<div class="vorige_volgende" id="volgende" onclick="naarR()">Volgende</div>
 <div id="results"></div>
     </div>
     <div id="preview">
