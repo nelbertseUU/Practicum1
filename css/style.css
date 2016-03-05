@@ -131,6 +131,10 @@ body{
 
 /* ---------- Tekst ---------- */
 
+p{
+    font-size: 18px;
+}
+
 .hoofdtitel{
     display: flex;
     justify-content: center;
@@ -151,7 +155,7 @@ body{
     justify-content: center;
     font-family: Geo Sans Light Oblique;
     width: 640px;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 /* ---------- Video ---------- */
@@ -197,6 +201,10 @@ body{
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px 20px;
+    -webkit-transition-duration: 0.3s;
+  	transition-duration: 0.3s;
+  	-webkit-transition-property: color, background-color;
+ 	transition-property: color, background-color;
 }
 
 .menulinks:hover{
@@ -205,8 +213,9 @@ body{
 
 .dropdown{
     display: flex;
-    
 }
+
+
 
 .dropdown_menu{
     background-color: aliceblue;
