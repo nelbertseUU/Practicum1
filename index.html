@@ -6,7 +6,6 @@
  
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="css/style.css">
-<script src="js/randomColor.js"></script>
 <script src="js/jquery-2.2.0.js"></script> 
 <script> 
 $(function(){
@@ -23,15 +22,7 @@ function Oogklik(){
 }
 
 </script> 
-<script src="js/ping.js"></script>
-    <script>//script om een site of ip te pingen
-    var do_ping = function() {
-        ping(document.getElementById('pingurl').value).then(function(delta) {
-            document.getElementById("pingtime").innerHTML = "Pingtijd is: " + delta + " miliseconde";   
-        }).catch(function(error) {
-            alert(String(error));
-        });
-    };
+<script>
  //script voor het draaien van t plaatje
 var looper;
 var degrees = 0;
@@ -41,10 +32,6 @@ function rotateAnimation(el,speed){
 		elem.style.WebkitTransform = "rotate("+degrees+"deg)";
 	} else if(navigator.userAgent.match("Firefox")){
 		elem.style.MozTransform = "rotate("+degrees+"deg)";
-	} else if(navigator.userAgent.match("MSIE")){
-		elem.style.msTransform = "rotate("+degrees+"deg)";
-	} else if(navigator.userAgent.match("Opera")){
-		elem.style.OTransform = "rotate("+degrees+"deg)";
 	} else {
 		elem.style.transform = "rotate("+degrees+"deg)";
 	}
@@ -62,6 +49,7 @@ function rotateAnimation(el,speed){
 <div class="parent_content">
 <div class="content">
 <h1 class="hoofdtitel">Webvisualisatie</h1>
+<<<<<<< HEAD
 <div id="oog" onclick="Oogklik()"><img id="oogplaatje" src="images/eye.png" height="400" width="400" alt="oogbal"/></div>
 <div id="ipIn">
 <input id='pingurl' type='text' value='http://google.com'/>
@@ -71,6 +59,7 @@ function rotateAnimation(el,speed){
 <p id="pingtime"></p>
 </div>
 <p><strong>Het internet, we kennen en gebruiken het allemaal. YouTube filmpjes, tweets en Facebook statussen zijn geïntegreerd in ons dagelijks leven. In een relatief korte tijd van ongeveer twintig à dertig jaar heeft het internet ons leven veranderd. Het internet is met de tijd zelfs zo vanzelfsprekend geworden, dat men er niet meer bij stilstaat hoe verbazingwekkend het internet eigenlijks is. Door het web te visualiseren, is het mogelijk om een beeld te krijgen van het internet en hoe het ons leven beïnvloedt. Onze onderzoeksvraag luidt daarom:’’Op welke manieren is het web te visualiseren?’’.</strong></p>
+<div id="oog" onclick="Oogklik()"><img id="oogplaatje" src="images/eye.png" height="400" width="400" alt="oogbal"/></div>
 <h2 class="kopje">Abstract</h2>
 <p>Er zijn verschillende manieren om een webvisualisatie te maken. Deze manieren delen we op in 3 soorten. Deze soorten zijn acces logs, traceroute en overig. De visualisaties gebaseerd op acces logs halen data uit, je raad het al, acces logs. dit zijn bestanden (logs) bijgehouden door servers, waar alle requests in staan die gedaan zijn. met deze informatie kun je visualiseren wie wat heeft opgehaald. Traceroute maakt gebruik van de informatie over hoe een pakket van source naar destination reist, door welke nodes deze gaat, en hoelang deze erover doet. Bij overig wordt aangetoont dat er manieren zijn om het web te visualiseren, waar men niet het eerst aan zou denken. Er wordt bij overig onder andere infographics behandeld.</p>
 
