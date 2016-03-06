@@ -88,10 +88,11 @@ body{
     width: 10%;
     text-transform: uppercase;
     cursor: pointer;
+    color: cadetblue;
 }
 
 .vorige_volgende:hover{
-    background: white;
+    color: black;
 }
 
 #volgende{
@@ -104,7 +105,9 @@ body{
     height: 100%;
     width:80%;
     margin-left: 10%;
-    background-color: cyan;
+    background: url('images/the_internet_the_it_crowd.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #preview{
@@ -153,9 +156,13 @@ p{
 .omschrijving{
     display: flex;
     justify-content: center;
-    font-family: Geo Sans Light Oblique;
+    font-family: Geo Sans Light Oblique, sans-serif;
     width: 640px;
     font-size: 16px;
+}
+
+.nadruk{
+    font-family: Geo Sans Light Oblique, sans-serif;
 }
 
 /* ---------- Video ---------- */
@@ -197,14 +204,15 @@ p{
 .menulinks{
     display: flex;
     justify-content: center;
+    font-size: 18.5px;
     color: cadetblue;
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px 20px;
     -webkit-transition-duration: 0.3s;
   	transition-duration: 0.3s;
-  	-webkit-transition-property: color, background-color;
- 	transition-property: color, background-color;
+  	-webkit-transition-property: color;
+ 	transition-property: color;
 }
 
 .menulinks:hover{
@@ -214,8 +222,6 @@ p{
 .dropdown{
     display: flex;
 }
-
-
 
 .dropdown_menu{
     background-color: aliceblue;
@@ -242,13 +248,17 @@ p{
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
-.bronnen_link{
+.footer a{
     color:aliceblue;
 }
 
-/* ---------- Acces Logs ---------- */
+.footer a:hover{
+    color:#595959;
+}
 
-.voorbeeld_acces_logs{
+/* ---------- Access Logs ---------- */
+
+.voorbeeld_access_logs{
     padding: 10px;
     border: 1px solid black;
 }
@@ -285,6 +295,54 @@ p{
 .oranje{
     background-color: #E99330;
     padding: 10px;
+}
+
+/* ---------- Sitemap ---------- */
+
+.accordion_layout{
+    display: flex;
+    flex-direction: column;
+}
+
+#accordion{
+    z-index: 9999;
+    position: fixed;
+    margin-top: 50px;
+    margin-left: 0px;
+    background-color: #000066;
+    padding: 20px 30px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+#clickable{
+    cursor: pointer;
+}
+
+.accordion_layout a{
+    text-decoration: none;
+    color: aliceblue;
+    -webkit-transition-duration: 0.3s;
+  	transition-duration: 0.3s;
+  	-webkit-transition-property: color;
+ 	transition-property: color;
+}
+
+.accordion_layout a:hover{
+    color: cadetblue;
+}
+
+.sitemap_header{
+    font-size: 30px;
+}
+
+.sitemap_header2{
+    margin-left: 50px;
+    font-size: 26px;
+}
+
+.sitemap_header3{
+    margin-left: 100px;
+    font-size: 22px;
 }
 
 /* ---------- Bronnen ---------- */

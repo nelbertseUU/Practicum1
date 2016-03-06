@@ -1,8 +1,0 @@
-Linkjes:
-http://internet-map.net/ - internet map
-http://thecreatorsproject.vice.com/blog/the-best-ways-to-visualize-the-internet-in-real-time - pagina met meerdere visualisaties
-http://onesecond.designly.com/ - infographic
-http://royal.pingdom.com/2010/11/25/awesome-visualizations-of-internet-and-web-tech/ - pagina met meerdere visualisaties
-http://www.norse-corp.com/ - DDOS visualisatie
-http://logstalgia.io/ -- Visualisatie van ge opgvraagde gegevens
-http://kylerush.net/blog/flickr-api/#full-url-one - How to use flickr api
