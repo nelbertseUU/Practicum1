@@ -105,10 +105,7 @@ body{
     height: 100%;
     width:80%;
     margin-left: 10%;
-    background: url('images/the_internet_the_it_crowd.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+   }
 
 #preview{
     width: 100%;
@@ -130,6 +127,11 @@ body{
 #flickresultaat{
     height: 100%;
     width: 100%;
+}
+
+#theinternet{
+    height: 100%;
+    width: 100%; 
 }
 
 /* ---------- Tekst ---------- */
