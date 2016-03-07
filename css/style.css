@@ -15,7 +15,6 @@
 /* ---------- Belangrijke tags ---------- */
 
 html{
-    min-height: 100%;
     overflow: -moz-scrollbars-vertical; 
 	overflow-y: scroll;
 }
@@ -26,7 +25,6 @@ body{
     background-color: #369AFF;
     display: flex;
     justify-content: center;
-    align-content: center;
     flex-direction: column;
 }
 #grafiek1{
@@ -241,9 +239,8 @@ p{
 /* ---------- Footer ---------- */
 
 #footer{
-    position: absolute;
     height: 100px;
-    width: 100%;
+    width: 100%;   
     margin-bottom: 0px;
     background-color: darkgray;
     color: aliceblue;
