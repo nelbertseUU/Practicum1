@@ -1,0 +1,397 @@
+/* ---------- Stijl van de pagina ---------- */
+
+/* ---------- Font ---------- */
+
+@font-face {
+	font-family: 'Geo Sans Light';
+	src: url('font/GeosansLight.ttf');
+}
+
+@font-face {
+	font-family: 'Geo Sans Light Oblique';
+	src: url('font/GeosansLight-Oblique.ttf');
+}
+
+/* ---------- Belangrijke tags ---------- */
+
+html{
+    min-height: 100%;
+    overflow: -moz-scrollbars-vertical; 
+	overflow-y: scroll;
+}
+
+body{
+    font-family: Geo Sans Light, sans-serif;
+    margin: 0px;
+    background-color: #369AFF;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+#grafiek1{
+    height: 400px;
+    width: 600px;
+}
+
+.parent_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content{
+    text-align: justify;
+    width: 80%;
+    min-height: 86%;
+    margin: 50px 0px 10px 0px;
+    padding: 20px 40px;
+    background-color: #e6ffff;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.bronnen{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    background-color: #e6ffff;
+    padding: 20px 40px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    margin-bottom: 10px;
+}
+
+.centreer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#oog{
+    display: flex;
+    justify-content: center;
+}
+/* ----------Fotogallerij------*/
+
+#fotogallerij{
+    width:100%;
+    height: 400px;
+    
+}
+
+.vorige_volgende{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 10%;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: cadetblue;
+}
+
+.vorige_volgende:hover{
+    color: black;
+}
+
+#volgende{
+    float: right;
+}
+#vorige{
+    float: left;
+}
+#results{
+    height: 100%;
+    width:80%;
+    margin-left: 10%;
+   }
+
+#preview{
+    width: 100%;
+    height: 100px;    
+}
+
+#prlinks{
+    height: 100%;
+    width: 20%;
+    float: left;
+    background-color: aquamarine;
+}
+#prrechts{
+     height: 100%;
+    width: 20%;
+    float: right;
+    background-color: aquamarine;
+}
+#flickresultaat{
+    height: 100%;
+    width: 100%;
+}
+
+#theinternet{
+    height: 100%;
+    width: 100%; 
+}
+
+/* ---------- Tekst ---------- */
+
+p{
+    font-size: 18px;
+}
+
+.hoofdtitel{
+    display: flex;
+    justify-content: center;
+}
+
+.kopje{
+    display: flex;
+    justify-content: center;
+}
+
+.tussenkopje{
+    display: flex;
+    justify-content: center;
+}
+
+.omschrijving{
+    display: flex;
+    justify-content: center;
+    font-family: Geo Sans Light Oblique, sans-serif;
+    width: 640px;
+    font-size: 16px;
+}
+
+.nadruk{
+    font-family: Geo Sans Light Oblique, sans-serif;
+}
+
+/* ---------- Video ---------- */
+
+.youtube{
+    border: 0px;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75); 
+}
+
+/* ---------- Menubalk ---------- */
+
+.menubalk{
+    z-index: 200;
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    width: 100%;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+}
+
+.menublokken{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    background-color: aliceblue;
+}
+
+.menublokken_dropdown{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.menulinks{
+    display: flex;
+    justify-content: center;
+    font-size: 18.5px;
+    color: cadetblue;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    -webkit-transition-duration: 0.3s;
+  	transition-duration: 0.3s;
+  	-webkit-transition-property: color;
+ 	transition-property: color;
+}
+
+.menulinks:hover{
+    color:black;
+}
+
+.dropdown{
+    display: flex;
+}
+
+.dropdown_menu{
+    background-color: aliceblue;
+    display: none;
+    position: absolute;
+    padding: 0px;
+    width: 16.66%;
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
+}
+
+.afstand_anchor{
+    height: 38px;
+}
+
+/* ---------- Footer ---------- */
+
+#footer{
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 0px;
+    background-color: darkgray;
+    color: aliceblue;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.footer a{
+    color:aliceblue;
+}
+
+.footer a:hover{
+    color:#595959;
+}
+
+/* ---------- Access Logs ---------- */
+
+.voorbeeld_access_logs{
+    padding: 10px;
+    border: 1px solid black;
+}
+
+/* ---------- Traceroute ---------- */
+
+.kleuren_lijst{
+    list-style: none;
+    width: 200px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.blauw{
+    background-color: #1056CA;
+    padding: 10px;
+}
+
+.groen{
+    background-color: #88F509;
+    padding: 10px;
+}
+
+.paars{
+    background-color: #A50FEB;
+    padding: 10px;
+}
+
+.rood{
+    background-color: #A91034;
+    padding: 10px;
+}
+
+.oranje{
+    background-color: #E99330;
+    padding: 10px;
+}
+
+/* ---------- Sitemap ---------- */
+
+.accordion_layout{
+    display: flex;
+    flex-direction: column;
+}
+
+#accordion{
+    z-index: 9999;
+    position: fixed;
+    margin-top: 50px;
+    margin-left: 0px;
+    background-color: #000066;
+    padding: 20px 30px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+#clickable{
+    cursor: pointer;
+}
+
+.accordion_layout a{
+    text-decoration: none;
+    color: aliceblue;
+    -webkit-transition-duration: 0.3s;
+  	transition-duration: 0.3s;
+  	-webkit-transition-property: color;
+ 	transition-property: color;
+}
+
+.accordion_layout a:hover{
+    color: cadetblue;
+}
+
+.sitemap_header{
+    font-size: 30px;
+}
+
+.sitemap_header2{
+    margin-left: 50px;
+    font-size: 26px;
+}
+
+.sitemap_header3{
+    margin-left: 100px;
+    font-size: 22px;
+}
+
+/* ---------- Bronnen ---------- */
+
+.bronnen_lijsten{
+    display: flex;
+    width: 80%;
+}
+
+.bronnen_lijst{
+    list-style: decimal;
+    width: 76%;
+    color: dimgray;
+}
+
+.bronnen_lijst a{
+    color: dimgray;
+}
+
+.locatie_tekst{
+    list-style: none;
+    padding: 0px;
+}
+
+.locatie_tekst li:nth-child(even){
+    background-color: #d9d9d9;
+}
+
+.bronnen_lijst li:nth-child(even){
+    background-color: #d9d9d9;
+}
+
+.bronnen_lijsten a:hover{
+    color: cadetblue;
+}
+
+/* ---------- Tooltip ---------- */
+
+.ui-tooltip {
+    width: 50%;
+    text-align: center;
+    padding: 10px 20px;
+    background: #369AFF;
+    border: 1px solid aliceblue;
+    color: aliceblue;
+    border-radius: 2px;
+    font: bold 14px;
+    box-shadow: 0 0 7px black;
+    margin: 0px 20px;
+}

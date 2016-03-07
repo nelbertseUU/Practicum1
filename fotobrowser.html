@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Webvisualisatie</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery-2.2.0.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/include.js"></script>
+<script>
+    var fotoNummer = 50;
+    var FinalURL ="https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=42204b69cbc9116fd03600ee3041e1f3&tags=web&format=json&nojsoncallback=1";
+    function naarR(){
+        if(fotoNummer == 300){
+            fotoNummer = 1;
+        }
+        else{
+             fotoNummer = fotoNummer + 1;
+        }  
+        Pakfoto(FinalURL, fotoNummer);
+    }
+    function naarL(){
+        if(fotoNummer == 1){
+            fotoNummer = 300;
+        }
+        else{
+             fotoNummer = fotoNummer - 1;
+        } 
+        Pakfoto(FinalURL, fotoNummer);
+    }
+    function Pakfoto(FinalURL, fotoNummer){
+         $.getJSON(FinalURL, function(photos) {
+              $('#results').empty();
+        $('#prrechts').empty();
+        $('#prlinks').empty();
+             var photo = photos.photos.photo[fotoNummer];
+             console.log(photo);
+             var photoUrl = "https://farm" + photo.farm + ".staticflickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + ".jpg";
+             
+             $('#results').append('<a href="' + photoUrl + '" target="_blank"><img id="flickresultaat" src="' + photoUrl + '"/></a>');
+             
+             var photo = photos.photos.photo[fotoNummer - 1];
+             console.log(photo);
+             var photoUrl = "https://farm" + photo.farm + ".staticflickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + ".jpg";
+             
+             $('#prlinks').append('<a href="' + photoUrl + '" target="_blank"><img id="flickresultaat" src="' + photoUrl + '"/></a>');
+             
+             var photo = photos.photos.photo[fotoNummer + 1];
+             console.log(photo);
+             var photoUrl = "https://farm" + photo.farm + ".staticflickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + ".jpg";
+             
+             $('#prrechts').append('<a href="' + photoUrl + '" target="_blank"><img id="flickresultaat" src="' + photoUrl + '"/></a>');
+         });
+    }
+    
+    $(document).ready(function () {
+    $("#button").click(function (event) {
+        fotoNummer = 50;
+        var searchTerm = $("#searchbox").val();
+        var aantalFotos = $("#aantalBox").val();
+        var Flickurl = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=42204b69cbc9116fd03600ee3041e1f3&";
+        var tags = "&tags=" + searchTerm;
+        var tagmode = "&tagmode=any";
+        var jsonFormat = "&format=json&nojsoncallback=1";
+        FinalURL = Flickurl + tags + tagmode + jsonFormat;
+ 
+        Pakfoto(FinalURL, fotoNummer);
+       });
+});           
+</script>
+</head>
+<body>
+<div id="menubalk"></div>
+<div id="sitemap"></div>
+<div class="parent_content">
+<div class="content">
+<h1 class="hoofdtitel">Webvisualisatie</h1>
+    
+<div id="input"> 
+    <input type="text" id="searchbox" value = "webtech">
+<h2>Vul een zoekterm in, druk dan op de knop</h2>  
+<button type="button" class="btn btn-success" id="button">Haal foto's op</button>  
+     
+</div>  
+
+    <hr>
+<div id="fotogallerij">
+<div class="vorige_volgende" id="vorige" onclick="naarL()">Vorige</div>
+<div class="vorige_volgende" id="volgende" onclick="naarR()">Volgende</div>
+<div id="results">
+    <img id="theinternet" src="images/The_Internet.png"></div>
+    </div>
+    <div id="preview">
+    <div id="prlinks"></div>
+        <div id="prrechts"></div>
+    </div>
+    </div>
+</div>  
+    <div id="footer"></div>
+</body>  
+</html>  

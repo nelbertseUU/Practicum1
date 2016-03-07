@@ -1,0 +1,39 @@
+<script src="js/jquery-2.2.0.js"></script> 
+<script src="js/jquery-ui.js"></script>
+<script>
+$(function() {
+    $("#accordion").accordion({
+        active: false,
+        collapsible: true,
+        heightStyle: "content"
+    });
+ });
+</script>
+<div class="accordion_layout" id="accordion" aria-expanded="false">
+    <a class="sitemap_header" id="clickable">Sitemap</a>
+    <div>
+    <a class="sitemap_header" href="index.html">Home</a>
+    <div class="accordion_layout">
+        <a class="sitemap_header2" href="traceroute.html">Traceroute</a>
+        <div class="accordion_layout">
+            <a class="sitemap_header3" href="traceroute.html#the_internet_map">The Internet Map</a>
+            <a class="sitemap_header3" href="traceroute.html#map_of_the_internet">Map of the Internet</a>
+            <a class="sitemap_header3" href="traceroute.html#the_opte_project">The Opte Project</a>
+        </div>
+        <a class="sitemap_header2" href="access_logs.html">Access Logs</a>
+        <div class="accordion_layout">
+            <a class="sitemap_header3" href="access_logs.html#Logstalgia">Logstalgia</a>
+            <a class="sitemap_header3" href="access_logs.html#glTail">glTail</a>
+            <a class="sitemap_header3" href="access_logs.html#Gource">Gource</a>
+            <a class="sitemap_header3" href="access_logs.html#glTrail">glTrail</a>
+        </div>
+        <a class="sitemap_header2" href="overige_visualisaties.html">Overige Visualisaties</a>
+        <div class="accordion_layout">
+            <a class="sitemap_header3" href="overige_visualisaties.html#infographics">Infographics</a>
+        </div>
+        <a class="sitemap_header2" href="fotobrowser.html">Fotobrowser</a>
+        <div></div>
+        <a class="sitemap_header2" href="conclusie.html">Conclusie</a>
+    </div>
+    </div>
+</div>
